@@ -59,6 +59,73 @@
   }
 }
 
+/* Starfall component required styles */
+.geist-font {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.inter-font {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(280, 65%, 60%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glass-card {
+  background: hsl(220 18% 8% / 0.5);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid hsl(220 16% 16% / 0.5);
+  border-radius: 1rem;
+}
+
+.glass-button {
+  background: hsl(220 18% 8% / 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsl(220 16% 16% / 0.5);
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: hsl(220 18% 12% / 0.6);
+  border-color: hsl(199 89% 48% / 0.3);
+}
+
+.primary-button {
+  background: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(217, 91%, 60%));
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px hsl(199 89% 48% / 0.3);
+}
+
+.project-image {
+  background: linear-gradient(135deg, hsl(220 18% 10%), hsl(220 16% 14%));
+  border: 1px solid hsl(220 16% 16% / 0.3);
+}
+
+.skill-badge {
+  background: hsl(220 16% 12% / 0.6);
+  border: 1px solid hsl(220 16% 16% / 0.3);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(220 16% 16% / 0.5), transparent);
+}
+
 @layer utilities {
   .text-gradient {
     background: var(--gradient-primary);
@@ -72,10 +139,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-
-  .glass-card {
-    @apply bg-card/50 backdrop-blur-xl border border-border/50 rounded-2xl;
   }
 
   .glow-border {

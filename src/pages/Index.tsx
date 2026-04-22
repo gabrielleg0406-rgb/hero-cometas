@@ -1,74 +1,58 @@
 import { PortfolioPage, PortfolioPageProps } from "@/components/ui/starfall-portfolio-landing";
-import PillaresSection from "@/components/PillaresSection";
 import ProcessoSection from "@/components/ProcessoSection";
 import FooterSection from "@/components/FooterSection";
 
-const agLabsData: PortfolioPageProps = {
+const genericData: PortfolioPageProps = {
   logo: {
-    initials: "AG",
-    name: "AG LABS",
+    initials: "LO",
+    name: "Logo",
   },
   navLinks: [
-    { label: "Serviços", href: "#projects" },
-    { label: "Processo", href: "#processo" },
-    { label: "Contato", href: "#contato" },
+    { label: "Sobre", href: "#about" },
+    { label: "Projetos", href: "#projects" },
+    { label: "Skills", href: "#skills" },
   ],
   resume: {
-    label: "Fale Conosco",
-    onClick: () => {
-      document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" });
-    },
+    label: "Currículo",
   },
   hero: {
-    titleLine1: "Sistemas de IA que",
-    titleLine2Gradient: "automatizam, escalam e operam negócios",
+    titleLine1: "Título principal aqui",
+    titleLine2Gradient: "com destaque em gradiente",
     subtitle:
-      "Automações, agentes inteligentes, SaaS e sistemas sob medida para empresas que querem crescer com eficiência.",
+      "Subtítulo descritivo do projeto ou serviço. Use este espaço para apresentar sua proposta de valor de forma clara e objetiva.",
   },
   ctaButtons: {
     primary: {
-      label: "Como Funciona",
-      onClick: () => {
-        document.getElementById("processo")?.scrollIntoView({ behavior: "smooth" });
-      },
+      label: "Botão Primário",
     },
     secondary: {
-      label: "Nossos Serviços",
-      onClick: () => {
-        document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-      },
+      label: "Botão Secundário",
     },
   },
   projects: [
     {
-      title: "Infraestrutura de IA",
-      description: "Arquitetura, banco de dados e orquestração para sistemas inteligentes.",
-      tags: ["Arquitetura", "Banco de dados", "Orquestração"],
-      imageContent: <div className="text-4xl">🧩</div>,
+      title: "Projeto 1",
+      description: "Descrição breve do primeiro projeto e suas principais características.",
+      tags: ["Tag 1", "Tag 2"],
+      imageContent: <div className="text-4xl">✨</div>,
     },
     {
-      title: "Agentes Inteligentes",
-      description: "Agentes de atendimento, vendas e suporte que operam 24/7.",
-      tags: ["Atendimento", "Vendas", "Suporte"],
-      imageContent: <div className="text-4xl">🤖</div>,
+      title: "Projeto 2",
+      description: "Descrição breve do segundo projeto e suas principais características.",
+      tags: ["Tag 1", "Tag 2"],
+      imageContent: <div className="text-4xl">🚀</div>,
     },
     {
-      title: "Automação",
-      description: "Automação de processos internos e integração entre sistemas.",
-      tags: ["Processos internos", "Integração"],
-      imageContent: <div className="text-4xl">⚙️</div>,
-    },
-    {
-      title: "Produtos & SaaS",
-      description: "Barber PRO e APP AG LABS — soluções prontas com IA generativa.",
-      tags: ["Barber PRO", "APP AG LABS"],
-      imageContent: <div className="text-4xl">📈</div>,
+      title: "Projeto 3",
+      description: "Descrição breve do terceiro projeto e suas principais características.",
+      tags: ["Tag 1", "Tag 2"],
+      imageContent: <div className="text-4xl">💡</div>,
     },
   ],
   stats: [
-    { value: "4", label: "Pilares de IA" },
-    { value: "100+", label: "Automações Entregues" },
-    { value: "24/7", label: "Agentes em Operação" },
+    { value: "50+", label: "Projetos" },
+    { value: "5+", label: "Anos de Experiência" },
+    { value: "20+", label: "Clientes" },
   ],
   showAnimatedBackground: true,
 };
@@ -76,7 +60,7 @@ const agLabsData: PortfolioPageProps = {
 const Index = () => {
   return (
     <div className="relative">
-      <PortfolioPage {...agLabsData} />
+      <PortfolioPage {...genericData} />
       <div className="relative z-10">
         <ProcessoSection />
         <FooterSection />
